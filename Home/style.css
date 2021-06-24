@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Ubuntu,Arial, Helvetica, sans-serif;
+}
+
+#menuHeader{
+    background: rgb(137, 137, 224);
+    width: 100%;
+    position: fixed;
+}
+
+#menuHeader .menuNavigation{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuHeader .menuNavigation h2{
+    color: #F5F5F5;
+    font-weight: 600;
+}
+
+#menuHeader .menuNavigation .NavigationmenuNav ul{
+    display: flex;
+}
+
+#menuHeader .menuNavigation .NavigationmenuNav ul li{
+    list-style: none;
+}
+
+#menuHeader .menuNavigation .NavigationmenuNav ul li a{
+    text-decoration: none;
+    margin: 1rem;
+    color: #F5F5F5;
+}
+
+/* ========================================================================== */
+/*criando menu Hamburguer */
+.menuHambuggerLabel{
+    color: #F5F5F5;
+    font-size: 1.8rem;
+    line-height: 5rem;
+    margin-right: 2.5rem;
+    float: right;
+    cursor: pointer;
+    display: none; 
+}
+
+#menuHambuggerInput{
+    display: none;
+}
+
+/* ========================================================================================= */
+/* part scroll */
+/* https://www.youtube.com/watch?v=9QlRtS7FckI&list=RDCMUCxsjItE8ek_KG21BClqBo7Q&index=4 */
+.carousel{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.slider{
+    /* width: 800px; */ 
+    /* height: 500px; */
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slider .slides{
+    display: flex;
+    width: 500%;
+    /* height: 500px; */
+}
+
+.slider .slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;   
+    transition: 2s;
+}
+
+.slide img{
+    width: 100vw;
+    height: 300px; /*500px*/
+}
+
+.navigationManual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manualBtn{
+    /* padding: 5px; */
+    border-radius: 10px;
+    cursor: pointer;
+    /* transition: 3s; */
+    background: white;
+}
+
+.manualBtn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manualBtn:hover{
+    background: white;
+}
+
+#radio1:checked ~ .First{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .First{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .First{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .First{
+    margin-left: -60%;
+}
+
+.navigationAuto{
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin-top: 280px;
+}
+
+.navigationAuto div{
+    border: solid 2px white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigationAuto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigationAuto .btn1{
+    background: white;
+}
+
+#radio2:checked ~ .navigationAuto .btn2{
+    background: white;
+}
+
+#radio3:checked ~ .navigationAuto .btn3{
+    background: white;
+}
+
+#radio4:checked ~ .navigationAuto .btn4{
+    background: white;
+}
+
+/* itens abaixo do slider===================================================================== */
+.all-engloba{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-engloba .lagos{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 40px;
+    border: solid 1px rgb(231, 226, 226);
+}
+
+.imgLadoALado{
+    width: 100%;
+    background-size: cover;
+}
+
+.lagosFlexDirections{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    /* padding: 0 0 0 10px; */
+}
+
+.lagosFlexDirections strong{
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 0 0 10px;
+}
+
+.lagosFlexDirections span{
+    color: rgb(146, 145, 145);
+    font-weight: 300;
+    padding: 0 0 0 10px;
+}
+
+.lagosFlexDirections p{
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+}
+
+.lagosFlexDirections .colorblue{
+    color: blue;
+    padding: 0 0 0 10px;
+}
+
+.backgroud{
+    background: rgb(231, 226, 226);
+}
+
+.imgSeprado{
+    flex-direction: column;
+}
+
+.apenas1img{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.apenas1img .imgSeprado{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apenas1img .imgSeprado img{
+    height: 300px;
+    width: 92vw;
+}
+
+.finals{
+    padding: 20px ;
+    display: flex;
+    width: 90%;
+}
+
+.h1Span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.h1Span h1{
+    font-size: 50px;
+}
+
+.finals .left{
+    background: rgb(231, 226, 226);
+    margin: 75px 40px;
+    width: 100%;
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.finals .left a{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    text-decoration: none;
+    color: blue;
+    padding: 10px;
+}
+
+.textFinals{
+    margin: 50px 40px;
+    width: 100%;
+    flex: 80%;
+}
+
+.finalsParagrafo{
+    padding: 20px 0;
+}
+
+.finalsParagrafo p{
+    text-align: justify;
+}
+
+footer{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F8F8F8;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+footer .footerMenu{
+    display: flex;
+}
+
+footer .footerMenu li{
+    list-style: none;
+}
+
+footer .footerMenu li a{
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+footer .logo{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.copyRihtText{
+    color: var(--black);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+@media(max-width: 560px){
+    .menuHambuggerLabel{
+        display: block;
+    }
+
+    #menuHeader .menuNavigation .NavigationmenuNav ul{
+        flex-direction: column;
+    }
+
+    ul{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(137, 137, 224);
+        top: 5rem;
+        left: -100%;
+        transition: 0.5s;
+        text-align: center;
+        display: block;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 2.1rem;
+    }
+
+    nav ul li a{
+        font-size: 1.25rem;
+        line-height: 1.8rem;
+    }
+
+    a:hover{
+        color: rgb(137, 137, 224);
+        background: none;
+    }
+
+    #menuHambuggerInput:checked ~ ul{
+        left: 0;
+    }
+
+    .all-engloba{
+        flex-direction: column;
+    }
+
+    .finals .left{
+        margin: 0;
+    }
+}
+
+@media(max-width: 700px){
+    .finals{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textFinals{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .h1Span h1{
+        font-size: 30px;
+    }
+    
+}

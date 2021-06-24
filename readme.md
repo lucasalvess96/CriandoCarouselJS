@@ -1,0 +1,1 @@
+criando um carousel e Praticando a responsividade
